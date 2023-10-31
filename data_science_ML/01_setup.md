@@ -6,11 +6,23 @@
 
 
 
+#### Partially Automating the Process
+
+So far, we've done the following steps :
+
+* We've generated a SSH Key Pair
+* We've added the SSH public key to Github
+* We've committed work to our repository
+* We then added our SSH key to the ssh-agent so we don't have to re-type our password for every commit
+
+We can automate this last step. Rather than typing our password every time we want to push to our repo, we only have to type our password once per shell session. We can automate this process in two steps:
+
+1. Configure Bash to start ssh-agent on shell session open
+2. Configure the ssh service to add the key to the agent after the initial use and password prompt
+
 #### Configuring Bash to start ssh-agent on open
 
-We can configure bash to start up `ssh-agent` on open. This is helpful as we can also configure our SSH keys to be automatically added to `ssh-agent` after one Github password prompt. In other words, rather than typing our password every time we want to push to our repo, we only have to type our password once.
-
-Open your `.bashrc` file with nano. 
+We can configure bash to start up `ssh-agent` on open. To do so, we need to edit our `.bashrc` (short for bash read command) which is a script that runs every time we start a shell session. Open your `.bashrc` file with nano. 
 
 ```bash
 nano ~/.bashrc
@@ -31,3 +43,6 @@ You can confirm that `ssh-agent` is running by typing `echo "$SSH_AUTH_SOCK"`.
 $ echo "$SSH_AUTH_SOCK"
 /tmp/ssh-XXXXXX2dfjZo/agent.13048
 ```
+
+#### Automatically adding our SSH key to the ssh-agent
+
