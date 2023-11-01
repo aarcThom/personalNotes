@@ -1,4 +1,4 @@
-# Workspace Setup
+# Git Setup
 ---
 
 ### Configuring SSH Keys
