@@ -1,12 +1,11 @@
 # Workspace Setup
+---
 
 ### Configuring SSH Keys
 
+---
 
-
-
-
-#### Partially Automating the Process
+### Partially Automating the Process
 
 So far, we've done the following steps :
 
@@ -46,3 +45,17 @@ $ echo "$SSH_AUTH_SOCK"
 
 #### Automatically adding our SSH key to the ssh-agent
 
+We can add a `config` file to our `~/.ssh` folder in order to set some settings for SSH communication. 
+
+```bash
+nano ~/.ssh/config
+```
+
+In the config file you can add the following lines. This configuration adds a key, once used to the ssh-agent for all hosts. If you wanted to further specify this behavior, you could change the asterisk to the host of your choice.
+
+```bash
+Host *
+  AddKeysToAgent yes
+```
+
+Save the file and close. And there we have it! You will only have to enter your password once per shell session when working with Git. 
