@@ -55,3 +55,45 @@ thomas@TI83:~$ conda activate
 thomas@TI83:~$
 ```
 
+---
+
+### Creating Environments with Specific Locations
+
+One thing that has kept me from exploring Conda for quite a while is that I liked how easily [pip](https://packaging.python.org/en/latest/tutorials/installing-packages/) creates an environment in the *current directory*, and how this is default behavior. By default Conda environments are created in the `envs/` folder of the `miniconda3` directory.
+
+It turns out, I'm just a bit lazy, and it is pretty easy to do this in Conda as well.
+
+```bash
+thomas@TI83:~$ cd repos/ # move to my repos directory
+thomas@TI83:~/repos$ mkdir condaTest # make a new directory for my project 'condaTest'
+thomas@TI83:~/repos$ cd condaTest/ # move to the project directory
+
+#AND HERE LIES THE IMPORTANT STEP - ENVIRONMENT CREATION
+thomas@TI83:~/repos/condaTest$ conda create --prefix ./env python=3.11
+```
+
+The last command can be broken down as:
+
+* `conda create --prefix ./env` - This creates an environment in a new sub-directory `./env`. 
+* `python=3.11` - This specifies the version of Python we want to use in this environment.
+
+If we added a few files to the project, our folder structures looks like this.
+
+```bash
+thomas@TI83:~/repos/condaTest$ tree -L 2
+.
+├── code.py
+├── env
+│   ├── bin
+│   ├── compiler_compat
+│   ├── conda-meta
+│   ├── include
+│   ├── lib
+│   ├── man
+│   ├── share
+│   ├── ssl
+│   ├── x86_64-conda-linux-gnu
+│   └── x86_64-conda_cos7-linux-gnu
+└── notebook.ipynb
+```
+
