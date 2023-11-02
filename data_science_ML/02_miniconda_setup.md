@@ -97,3 +97,32 @@ thomas@TI83:~/repos/condaTest$ tree -L 2
 └── notebook.ipynb
 ```
 
+---
+
+### Activating Environments that were Created in a Specific Directory
+
+To activate this environment you would move to the directory where the project is located - in this case `condaTest` - and then use the command `conda activate ./env`.
+
+```bash
+thomas@TI83:~$ cd repos/condaTest/
+thomas@TI83:~/repos/condaTest$ conda activate ./env
+(/home/thomas/repos/condaTest/env) thomas@TI83:~/repos/condaTest$
+```
+
+___
+
+### Changing your Environment's Name from that Long Absolute Path
+
+In the above example, our environment's name is `(/home/thomas/repos/condaTest/env)`. That is annoyingly long. You can change this behavior on a Conda-wide level by running the following command that edits your aforementioned `~/.condarc` properties file.
+
+```bash
+$ conda config --set env_prompt '({name})'
+```
+
+Now the previous example will look like this:
+
+```bash
+thomas@TI83:~$ cd repos/condaTest/
+thomas@TI83:~/repos/condaTest$ conda activate ./env
+(env)thomas@TI83:~/repos/condaTest$
+```
