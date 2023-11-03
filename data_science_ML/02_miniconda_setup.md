@@ -111,7 +111,7 @@ thomas@TI83:~/repos/condaTest$ conda activate ./env
 
 ___
 
-### Changing your Environment's Name from that Long Absolute Path
+### Changing your Environment's Name from that Long Absolute Path to Something Manageable
 
 In the above example, our environment's name is `(/home/thomas/repos/condaTest/env)`. That is annoyingly long. You can change this behavior on a Conda-wide level by running the following command that edits your aforementioned `~/.condarc` properties file.
 
