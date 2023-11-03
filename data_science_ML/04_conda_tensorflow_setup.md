@@ -124,3 +124,60 @@ Your kernel may have been built without NUMA support.
 ```
 
 If you see a `PhysicalDevice` within that final Python list, you are good to go!
+
+---
+
+### Troubleshooting if Something Goes Wrong
+
+As of November 3, 2023, it appears that Python 3.11 does not support the `[and-cuda]` option. In other words, when installing TensorFlow in a Python 3.11 Conda environment, you will not be able to install all the related CUDA drivers with the handy `pip install tensorflow[and-cuda]` command. You can confirm this by looking for this line buried within the TensorFlow install output:
+
+```bash
+#lots of stuff before this
+Collecting tensorflow[and-cuda]
+  Using cached tensorflow-2.13.1-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.4 kB)
+WARNING: tensorflow 2.13.1 does not provide the extra 'and-cuda' # <--- THIS IS THE LINE YOU ARE LOOKING FOR
+Collecting gast<=0.4.0,>=0.2.1 (from tensorflow[and-cuda])
+  Using cached gast-0.4.0-py3-none-any.whl (9.8 kB)
+Collecting keras<2.14,>=2.13.1 (from tensorflow[and-cuda])
+#lots of stuff after this
+```
+
+This is a reported and reproducible [error](https://github.com/tensorflow/tensorflow/issues/61993).
+
+If you have just created a new directory for your project and are just beginning to set things up, it's easiest to just delete the current environment and start again using Python 3.10.
+
+```bash
+(env)thomas@TI83:~/repos/ai_for_coders/01_intro$ conda deactivate
+thomas@TI83:~/repos/ai_for_coders$ cd ..
+thomas@TI83:~/repos/ai_for_coders$ rm 01_intro/ -r
+thomas@TI83:~/repos/ai_for_coders$ mkdir 01_intro
+thomas@TI83:~/repos/ai_for_coders$ cd 01_intro/
+thomas@TI83:~/repos/ai_for_coders/01_intro$ conda create --prefix ./env python=3.10
+```
+
+If you need to downgrade without deleting your environment, you can downgrade Python:
+
+```bash
+(env)thomas@TI83:~/repos/ai_for_coders/01_intro$ conda install python=3.9.0
+```
+
+I noticed that TensorFlow was uninstalled when I downgraded Python. You can confirm this by using the command `conda list`:
+
+```bash
+(env)thomas@TI83:~/repos/ai_for_coders/01_intro$ conda list
+# packages in environment at /home/thomas/repos/ai_for_coders/01_intro/env:
+#
+# Name                    Version                   Build  Channel
+_libgcc_mutex             0.1                        main
+_openmp_mutex             5.1                       1_gnu
+bzip2                     1.0.8                h7b6447c_0
+ca-certificates           2023.08.22           h06a4308_0
+ld_impl_linux-64          2.38                 h1181459_1
+libffi                    3.3                  he6710b0_2
+# ... more stuff below but NO TENSORFLOW
+
+```
+
+If this is the case, reinstall TensorFlow as before. 
+
+Otherwise, if it does appear, test to see if it is working by verifying your GPU (as above). If TensorFlow is installed but does not work after downgrading Python, your best bet is use `pip uninstall tensorflow` and then repeat, `pip install tensorflow[and-cuda]`. If this doesn't work, I'd probably just delete the environment and recreate it without touching the actual code.
