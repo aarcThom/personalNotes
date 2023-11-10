@@ -1,7 +1,61 @@
 # Git Setup
 ---
 
-### Configuring SSH Keys
+### Creating  SSH Keys
+
+"SSH keys are an authentication method used to gain access to an encrypted connection between systems and then ultimately use that connection to manage the remote system." [jumpcloud](https://jumpcloud.com/blog/what-are-ssh-keys)
+
+We will set up a SSH key on WSL to sync with our Github account.
+
+### Check if you  already have an SSH key saved to your WSL system
+
+Use the command `ls` (list directory contents) to see if you have any keys saved in the default `.ssh` directory.
+
+```bash
+ls ~/.ssh
+```
+
+If no directory is found, or the directory is empty, you can proceed with the following steps. If you already have an SSH key, you can skip to the *Adding your SSH key to Github* section.
+
+### Creating a New SSH Key
+
+To create a new SSH key, use the following command, replacing the "your email" with the email you set up in the previous `--global user.email` step.
+
+```bash
+ssh-keygen -t rsa -b 4096 -C "your email"
+```
+
+Press enter to accept the default location (`~/.ssh`).
+
+Enter a passphrase that you will remember. *You will need to remember this passphrase.*
+
+This command will create a private key `id_rsa` and a public key `id_rsa.pub` in the directory `~/.ssh`. To confirm this, you can type
+
+```bash
+ls ~/.ssh
+```
+
+Note: As of writing (2023-11-09), it appears that the ed25519 algorithm cannot be manage by the Ubuntu WSL2 ssh-agent. This is why we're using rsa instead. [See this link](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+
+### Adding a SSH Key to Github
+
+First, we need to copy the contents of our public key file to our clipboard. To do so in WSL, we use the command
+
+```bash
+cat <file we want to copy contents of> | clip.exe
+```
+
+In Linux, `cat` (concatenate) reads a file and outputs the contents. A pipe `|` , in Linux, [takes the output of one command and inputs into another command.](https://www.geeksforgeeks.org/piping-in-unix-or-linux/) And within WSL, `clip.exe` accesses Windows' clip board.
+
+So, to copy the contents of our public key, we can type
+
+```bash
+cat ~/.ssh/id_rsa.pub | clip.exe
+```
+
+ Logged into Github, go to https://github.com/settings/keys . Click *New SSH Key*. Give the key a descriptive name. `Ctrl + V` into the *key* field. Click *Add SSH key*.
+
+
 
 ---
 
