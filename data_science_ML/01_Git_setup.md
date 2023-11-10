@@ -163,6 +163,8 @@ eval `ssh-agent` > /dev/null
 
 On a side note, `> /dev/null` is a really useful command that redirects the *standard output* ( `stdout`)  to the null device `/dev/null`.
 
+Close and restart the terminal.
+
 You can confirm that `ssh-agent` is running by typing `echo "$SSH_AUTH_SOCK"`.
 
 ```bash
