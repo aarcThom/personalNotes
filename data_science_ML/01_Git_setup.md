@@ -187,4 +187,5 @@ Host *
   AddKeysToAgent yes
 ```
 
-Save the file and close. And there we have it! You will only have to enter your password once per shell session when working with Git. 
+Save the file and close. And there we have it! You will only have to enter your password once per shell session when working with Git!  
+
