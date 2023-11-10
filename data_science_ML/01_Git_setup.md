@@ -130,7 +130,12 @@ Now, you can leave out the option `-m` in your `git commit` command.
 
 Try saving saving some work in a repo and then running:
 
+```bash
+git add .
+git commit
+```
 
+You'll now see the custom Git template open in Nano!
 
 ---
 
