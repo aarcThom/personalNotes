@@ -69,6 +69,34 @@ git commit -m "your message" # commit changes with a message
 git push #push changes to the github repo
 ```
 
+You'll have to enter your SSH key password during this process, but we can alter this behavior so that we only need to enter our password once per terminal session.
+
+### Adding our SSH Key to The SSH-Agent
+
+Per terminal session, we can start a process, called `ssh-agent` that we can use as a key store. We add our key to the agent, and the agent will then automatically enter our key for us.
+
+First, check if `shh-agent` is running.
+
+```bash
+$ echo "$SSH_AUTH_SOCK" #check if it is running
+/tmp/ssh-XXXXXX0GNSeL/agent.602 # output like this = running. no output = not running
+```
+
+If it isn't running use the following command:
+
+```bash
+$ eval `ssh-agent` # enter this command
+Agent pid 631 #output should look like this
+```
+
+Assuming your key has the default name of `id_rsa` to add your SSH key to `ssh-agent`, use the following command. If you've given another name to your key, replace `id_rsa` with the name of your key.
+
+```bash
+$ ssh-add ~/.ssh/id_rsa
+```
+
+
+
 ---
 
 ### Partially Automating the Process
