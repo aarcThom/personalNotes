@@ -95,7 +95,7 @@ Assuming your key has the default name of `id_rsa` to add your SSH key to `ssh-a
 $ ssh-add ~/.ssh/id_rsa
 ```
 
-
+You will be prompted to enter your password. After you've done so, you won't need to enter your password again during the current terminal session.
 
 ---
 
