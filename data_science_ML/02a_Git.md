@@ -12,7 +12,11 @@ I find the easiest way to get a GitHub repo / local repo pairing set up is to se
 
 Navigate to the *repositories* tab once logged into Github, and then click the green *new* button.
 
-<img src="assets/image-20231113195734862.png" alt="image-20231113195734862" style="zoom: 80%;" align = "left" />
+<img src="assets/image-20231113195734862.png" alt="image-20231113195734862" style="zoom: 80%;" align = "left" />  
+
+
+
+
 
 In the *Create a new repository* page, give the repo a memorable name. I follow the same naming convention that I use for my Linux directories, namely:
 
@@ -37,7 +41,15 @@ Once this is all done, click the *create repository* button.
 
 Once you have created your repo on Github, navigate to that repo, and click the green *code* button. Select *SSH* and then click the copy button directly to the right of the repo address. This will copy the repo address to your clipboard.
 
-<img src="assets/image-20231113203932073.png" alt="image-20231113203932073" style="zoom:80%;" align = "left"/>
+<img src="assets/image-20231113203932073.png" alt="image-20231113203932073" style="zoom:80%;" align = "left"/>    
+
+
+
+
+
+
+
+
 
 Go to you terminal and `cd` to the directory that will contain the repo. *Note: The cloned repo will be a directory itself. You do not have to make a new directory.* Once you are there use the command `git clone` followed by the address you copied in the last step:
 
@@ -63,7 +75,7 @@ thomas@ti83:~/repos/test_repo$ git commit -m "Adding a test file" #committing al
 [main b927402] Adding a test file
  1 file changed, 0 insertions(+), 0 deletions(-)
  create mode 100644 testfile.txt
-thomas@ti83:~/repos/test_repo$ git push # pushing the ch
+thomas@ti83:~/repos/test_repo$ git push # pushing the changes to the remote GitHub repo
 Enumerating objects: 4, done.
 Counting objects: 100% (4/4), done.
 Delta compression using up to 16 threads
