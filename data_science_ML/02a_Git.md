@@ -18,6 +18,8 @@ Navigate to the *repositories* tab once logged into Github, and then click the g
 
 
 
+<br/><br/>
+
 In the *Create a new repository* page, give the repo a memorable name. I follow the same naming convention that I use for my Linux directories, namely:
 
 * All lower case
@@ -50,6 +52,8 @@ Once you have created your repo on Github, navigate to that repo, and click the 
 
 
 
+
+<br/><br/>
 
 Go to you terminal and `cd` to the directory that will contain the repo. *Note: The cloned repo will be a directory itself. You do not have to make a new directory.* Once you are there use the command `git clone` followed by the address you copied in the last step:
 
