@@ -44,9 +44,9 @@ In architectural practice and 3D modelling, we are used to working with 3-dimens
 
 Denoted by a bold letter. The vector attributes are enclosed in square brackets.
 
-${ \bold a} = [0,1,-10]$  
+$\bold{a} = [0,1,-10]$  
 
-${\bold b} = [-24.2,0,15,18.2]$
+$\bold{b} = [-24.2,0,15,18.2]$
 
 ### NumPy / Python Implementation
 
