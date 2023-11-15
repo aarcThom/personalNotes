@@ -21,7 +21,7 @@ These notes assume you have an Nvidia GPU that uses CUDA 3.5 or higher. You can 
 
 NOTE: The CUDA instructions above refer to the Game Ready driver. I actually installed the Studio Driver and everything is working AOK. The studio driver is probably what most designers would install, so this is worth mentioning.
 
-Download the most current Nvidia driver for your GPU [here](https://www.nvidia.com/download/index.aspx). Follow the prompts and wait until installation is complete. I'd restart your computer afterwards just to be safe.
+Download the most current Nvidia driver for your GPU [here](https://www.nvidia.com/download/index.aspx). Follow the prompts and wait until installation is complete. Restart your computer. If you don't the driver will not pick up on the WSL2 side and will return `segmentation fault` from the command `nvidia-smi` that we will use in the next step.
 
 **IMPORTANT NOTE:** Do not install any Nvidia drivers within WSL2. From Nvidia's documentation:
 
@@ -53,8 +53,6 @@ Wed Nov  1 22:54:23 2023
 +---------------------------------------------------------------------------------------+
 ```
 
-
-
 ---
 
 ### Install CUDA Toolkit
@@ -68,6 +66,12 @@ The commands for installation can be found [here](https://developer.nvidia.com/c
 * Installer Type = deb(network) (local is also fine but you'll just have to delete the installer file afterwards)
 
 Make sure that you are installing this outside of a Conda environment. This is a WSL2 wide install.
+
+---
+
+### Create a Conda environment for your TensorFlow project
+
+Follow the steps in the *miniconda_setup* notes.
 
 ---
 
