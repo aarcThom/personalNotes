@@ -48,6 +48,12 @@ ${\bf a} = [0,1,-10]$
 
 ${\bf b} = [-24.2,0,15,18.2]$
 
+To reference a specific attribute within a vector, you use an italic value of the vector with an index like: ${\it a}^{(x)}$. So for the examples above, we could reference the respective first and last attributes like so:
+
+${\it a}^{(0)} = 0$
+
+${\it b}^{(3)} = 18.2$
+
 ### NumPy / Python Implementation
 
 In NumPy, a `np.array` of an *array* of scalar values is a vector.

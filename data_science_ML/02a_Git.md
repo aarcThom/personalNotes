@@ -2,13 +2,13 @@
 
 ---
 
-### Starting from Zero
+## Starting from Zero
 
 I find the easiest way to get a GitHub repo / local repo pairing set up is to set up the Github remote repo first. You would do this at the very outset of the project, before you've written a line of code.
 
 ---
 
-#### Setting up your repo on Github
+### Setting up your repo on Github
 
 Navigate to the *repositories* tab once logged into Github, and then click the green *new* button.
 
@@ -33,7 +33,7 @@ Once this is all done, click the *create repository* button.
 
 ---
 
-#### Cloning your repo to your local computer
+### Cloning your repo to your local computer
 
 Once you have created your repo on Github, navigate to that repo, and click the green *code* button. Select *SSH* and then click the copy button directly to the right of the repo address. This will copy the repo address to your clipboard.
 
@@ -82,7 +82,7 @@ thomas@ti83:~/repos/test_repo$
 
 
 
-### You have already set up a project / virtual environment locally - Creating a Github repo from the command line
+## You have already set up a project / virtual environment locally - Creating a Github repo from the command line
 
 You are going to use Github CLI - to fill in...
 
