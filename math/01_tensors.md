@@ -4,9 +4,9 @@
 
 ## Scalar - Rank-0 Tensor
 
-### Definition
+### Definition and Explanation
 
-A simple numeric value such as *3* or *-4.5*. A **scalar** is a *rank-0 tensor* - i.e. it is a tensor with 0 dimensions - i.e. a tensor that contains only one number.
+A simple numeric value such as *3* or *-4.5*. A **scalar** is a *rank-0 tensor* - i.e. it is a tensor with 0 dimensions - i.e. a tensor that contains only one number. They are called *scalars* because they *scale* vectors and matrices without changing the vector or matrix's direction. 
 
 ### Denotation
 
@@ -32,13 +32,15 @@ In NumPy, a `np.array` of a single `float32` or `float64` is a scalar tensor.
 
 ## Vector - Rank-1 Tensor
 
-### Definition
+### Definition and Explanation
 
-A **vector** is an array of numbers. It is a rank-1 tensor in that it has one axis. The tensor is said to be *one-dimensional.* The vector itself will also have dimensionality. For instance a point $[2,3,0]$ is said to be a *3-dimensional vector but a 1-dimensional tensor*.
+A **vector** is an array of numbers. It is a rank-1 tensor in that it has one axis. Geometrically,  a vector is a line defined by a *magnitude* (length) and direction. The dimensionality of the vector, is also the dimensionality of the coordinate system used to represent the vector. For instance, a 2 dimensional vector $[1,2]$ could be represented in a standard 2D XY grid.
+
+The definition of a vector does not include its starting point. In other words, the vector $[1,2]$ indicates a positive direction (right 1 unit, up 2 units), and a magnitude ($\sqrt{5}$). This direction and magnitude tells use the location of the *head* (think of it as the arrow head) from the *tail* of the vector. However, the tail could start at any coordinate. A vector with its *tail* at the origin is said to start in the *standard position*.
+
+The tensor is said to be *one-dimensional.* The vector itself will also have dimensionality. For instance a point $[2,3,0]$ is said to be a *3-dimensional vector but a 1-dimensional tensor*.
 
 The list of scalar values contained within a vector are called **attributes**.
-
-In architectural practice and 3D modelling, we are used to working with 3-dimensional points and vectors.
 
 ### Denotation
 
@@ -66,5 +68,15 @@ In NumPy, a `np.array` of an *array* of scalar values is a vector.
 >>> 1
 ```
 
+### Vector Orientation
+
+$$
+Column \ Vectors:
+\begin{bmatrix} 2, \\ 3,\\ 4 \end{bmatrix},
+\begin{bmatrix} 0, \\ -1\end{bmatrix}
+$$ {  \}
 
 
+$$
+Row \ Vectors: [2,3,4], [0,-1]
+$$ {  \}
