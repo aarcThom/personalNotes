@@ -70,13 +70,11 @@ In NumPy, a `np.array` of an *array* of scalar values is a vector.
 
 ### Vector Orientation
 
-$$
-Column \ Vectors:
+$Column \ Vectors:
 \begin{bmatrix} 2, \\ 3,\\ 4 \end{bmatrix},
-\begin{bmatrix} 0, \\ -1\end{bmatrix}
-$$ {  \}
+\begin{bmatrix} 0, \\ -1\end{bmatrix}$
+
+$ Row \ Vectors: [2,3,4], [0,-1]$
 
 
-$$
-Row \ Vectors: [2,3,4], [0,-1]
-$$ {  \}
+
