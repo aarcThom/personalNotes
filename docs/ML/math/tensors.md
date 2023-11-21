@@ -70,11 +70,24 @@ In NumPy, a `np.array` of an *array* of scalar values is a vector.
 
 ### Vector Orientation
 
-$Column \ Vectors:
-\begin{bmatrix} 2, \\ 3,\\ 4 \end{bmatrix},
-\begin{bmatrix} 0, \\ -1\end{bmatrix}$
-
-$ Row \ Vectors: [2,3,4], [0,-1]$
+A column vector is a is $m \times 1$ matrix, where consisting of a single column with $m$ attributes.
+$$
+Column \ Vectors:
+\begin{bmatrix} 
+2, \\\ 
+3,\\\ 
+4 
+\end{bmatrix},
+\begin{bmatrix} 
+0, \\\ 
+-1
+\end{bmatrix}
+$$
+A row vector is a $1\times n$ matrix consisting of a single row of $n$ attributes.
+$$
+Row \ Vectors: [2,3,4], [0,-1]
+$$
+***Always assuming vectors are column vectors unless otherwise stated.*** Due to this, in text, a row vector will usually be denoted as being *transposed*. In other words, a row vector $\bf v$ would be written as $\bf{v}^T$. Also, in text, where we read horizontal lines, a column vector might be denoted as $[1,2,3]^T$. 
 
 
 
