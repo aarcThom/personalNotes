@@ -12,6 +12,7 @@ nav:
     - 'Machine Learning':
         - 'Math':
           - 'Tensors': 'ML/math/tensors.md'
+          - 'Vector Operations': 'ML/math/vector_operations.md'
     - About:
         - 'License': 'license.md'
         - 'Release Notes': 'release-notes.md'
