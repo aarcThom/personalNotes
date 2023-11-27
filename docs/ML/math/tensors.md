@@ -16,6 +16,12 @@ ${ \it a} = 34$
 
 ${\it b} = -24.2$
 
+*Note: In some texts, scalars are denoted using Greek lowercase letters.*
+
+$\lambda = 2$
+
+$\gamma = 45.1$
+
 ### NumPy / Python Implementation
 
 In NumPy, a `np.array` of a single `float32` or `float64` is a scalar tensor.
