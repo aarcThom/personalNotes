@@ -9,6 +9,8 @@
       
       
       
+        <link rel="prev" href="../../math/vector_operations/">
+      
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -16,7 +18,7 @@
     
     
       
-        <title>Keras gotcha - My Docs</title>
+        <title>BroadCasting - My Docs</title>
       
     
     
@@ -73,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#setting-up-intellisense-for-tensorflow-keras" class="md-skip">
+        <a href="#broadcasting" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Keras gotcha
+              BroadCasting
             
           </span>
         </div>
@@ -315,7 +317,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Git/git/" class="md-nav__link">
+      <a href="../../../Setup/Git/git/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -335,7 +337,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Git/git_setup/" class="md-nav__link">
+      <a href="../../../Setup/Git/git_setup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -399,7 +401,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/miniconda_setup/" class="md-nav__link">
+      <a href="../../../Setup/Python/miniconda_setup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -419,7 +421,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Python/conda_tensorflow_setup/" class="md-nav__link">
+      <a href="../../../Setup/Python/conda_tensorflow_setup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -452,18 +454,20 @@
       
   
   
+    
+  
   
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -477,7 +481,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Machine Learning
@@ -526,7 +530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ML/math/tensors/" class="md-nav__link">
+      <a href="../../math/tensors/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -546,7 +550,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ML/math/vector_operations/" class="md-nav__link">
+      <a href="../../math/vector_operations/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -572,18 +576,20 @@
                 
   
   
+    
+  
   
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
         
           
           <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
@@ -597,7 +603,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_2">
             <span class="md-nav__icon md-icon"></span>
             NumPy
@@ -608,9 +614,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../../ML/NumPy/broadcasting/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    BroadCasting
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -619,6 +645,53 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#scalar-broadcasting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scalar Broadcasting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inequal-sizes-does-not-broadcast" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inequal Sizes - Does NOT broadcast
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#one-dimension-to-many-dimensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      One Dimension  to Many Dimensions
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -739,6 +812,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -747,9 +822,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#setting-up-intellisense-for-tensorflow-keras" class="md-nav__link">
+  <a href="#scalar-broadcasting" class="md-nav__link">
     <span class="md-ellipsis">
-      Setting up intellisense for TensorFlow / Keras
+      Scalar Broadcasting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inequal-sizes-does-not-broadcast" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inequal Sizes - Does NOT broadcast
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#one-dimension-to-many-dimensions" class="md-nav__link">
+    <span class="md-ellipsis">
+      One Dimension  to Many Dimensions
     </span>
   </a>
   
@@ -770,10 +863,65 @@
                   
 
 
-  <h1>Keras gotcha</h1>
-
-<h2 id="setting-up-intellisense-for-tensorflow-keras">Setting up intellisense for TensorFlow / Keras</h2>
-<p>https://stackoverflow.com/questions/73496946/vscode-autocomplete-and-suggestion-intellisense-doesnt-work-for-tensorflow-an</p>
+<h1 id="broadcasting">Broadcasting</h1>
+<hr />
+<p>From the <a href="https://numpy.org/doc/stable/user/basics.broadcasting.html">docs</a>, <em>The term broadcasting describes how NumPy treats arrays with different shapes during arithmetic operations. Subject to certain constraints, the smaller array is “broadcast” across the larger array so that they have compatible shapes</em>. </p>
+<p>In linear algebra, tensors need to be of the same shape to perform element-wise arithmetic. For example, this works:
+$$
+[2,3] + [4,5] = [6,8]
+$$
+But this does not:
+$$
+[1,2,3]+
+\begin{bmatrix} 
+4 \\ 
+5
+\end{bmatrix}
+= ~?
+$$
+NumPy relaxes these assumptions and introduces the following 3 rules to match tensor elements.</p>
+<h2 id="scalar-broadcasting">Scalar Broadcasting</h2>
+<p><em>For each index dimension, counted from the back, if one of the operands is size 1 in that dimension, PyTorch will use the single entry along this dimension with each of the entries in the other tensor along this dimension.</em>[^1]</p>
+<p>In other words, if we have a NumPy or PyTorch scalar, we will duplicate the scalar by as many elements as there are in the tensor we want to modify and then do the element-wise arithmetic. For example:
+$$
+[x] + [a,b,c,d] = [a+x,~b+x,~c+x~d+x]
+$$
+In NumPy:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">])</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">]])</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="o">&gt;&gt;&gt;</span> <span class="p">[[</span><span class="mi">2</span> <span class="mi">2</span> <span class="mi">2</span><span class="p">]</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>     <span class="p">[</span><span class="mi">3</span> <span class="mi">3</span> <span class="mi">3</span><span class="p">]]</span>
+</span></code></pre></div>
+<p>This also works, if tensors contain the same amount of dimensions. In this case, the one to many broadcasting is performed per dimension. For example:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">],[</span><span class="mi">2</span><span class="p">]])</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">],[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">]])</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="o">&gt;&gt;&gt;</span> <span class="p">[[</span><span class="mi">2</span> <span class="mi">2</span> <span class="mi">2</span><span class="p">]</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>     <span class="p">[</span><span class="mi">4</span> <span class="mi">4</span> <span class="mi">4</span><span class="p">]]</span>
+</span></code></pre></div>
+<h2 id="inequal-sizes-does-not-broadcast">Inequal Sizes - Does NOT broadcast</h2>
+<p><em>If both sizes are greater than 1, they must be the same, and natural matching is used.</em>[^1]</p>
+<h2 id="one-dimension-to-many-dimensions">One Dimension  to Many Dimensions</h2>
+<p>If one tensor has one dimension, <em>the entirety of the other tensor will be used for each entry along these dimensions.</em>[^1]</p>
+<p>From <em>Deep Learning with PyTorch</em>:</p>
+<p><img alt="" src="../assets/broadcasting.png" /></p>
+<p>In NumPy:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">],[</span><span class="mi">2</span><span class="p">],[</span><span class="mi">3</span><span class="p">]])</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">])</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="o">&gt;&gt;&gt;</span><span class="p">[[</span><span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span><span class="p">]</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    <span class="p">[</span><span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span><span class="p">]</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>    <span class="p">[</span><span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span><span class="p">]]</span>
+</span></code></pre></div>
+<hr />
+<p>[^1]: Deep Learning with Pytorch - Eli Stevens, Luca Antiga, Thomas Viehmann</p>
 
 
 
